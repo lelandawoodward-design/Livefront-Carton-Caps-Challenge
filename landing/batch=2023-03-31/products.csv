@@ -1,0 +1,24 @@
+product_id,name,category,price,points_per_dollar,created_at
+1,Slurm Cereal,Breakfast,9.49,5,2023-02-16 00:00:00
+9,Atreides Organic Granola Bars,Breakfast,8.61,5,2023-03-29 00:00:00
+10,Replicant Foods Granola Bars,Breakfast,9.92,5,2023-01-05 00:00:00
+12,Lard Lad Granola Bars,Breakfast,2.22,3,2023-02-24 00:00:00
+13,Super Porp Yogurt,Breakfast,7.14,1,2023-03-29 00:00:00
+18,Krusty Waffles,Breakfast,6.56,1,2023-03-10 00:00:00
+19,Rekall Waffles,Breakfast,8.62,3,2023-03-23 00:00:00
+24,OCP Chips,Snacks,4.02,1,2023-03-26 00:00:00
+42,CHOAM Plate of Shrimp,Snacks,2.21,1,2023-01-08 00:00:00
+43,Atari Plate of Shrimp,Snacks,3.46,5,2023-01-08 00:00:00
+44,Lard Lad Plate of Shrimp,Snacks,2.01,2,2023-01-15 00:00:00
+46,Super Porp Juice,Beverages,3.99,2,2023-02-01 00:00:00
+55,Buzz Cola Sports Drink,Beverages,9.65,2,2023-02-15 00:00:00
+71,Cyberdyne Cheese,Dairy,7.36,2,2023-02-19 00:00:00
+77,Gunga Diner Ice Cream,Dairy,5.43,3,2023-01-23 00:00:00
+78,Veidt Enterprises Ice Cream,Dairy,8.08,3,2023-03-13 00:00:00
+80,Bene Gesserit Ice Cream,Dairy,9.95,2,2023-02-21 00:00:00
+88,Veidt Enterprises Pasta,Pantry,3.34,3,2023-02-17 00:00:00
+89,Nostalgia Rice,Pantry,7.3,2,2023-02-07 00:00:00
+95,Umbrella Soup,Pantry,7.02,3,2023-02-01 00:00:00
+96,Rekall Soup,Pantry,2.04,1,2023-01-01 00:00:00
+97,Shimago-Domínguez Sauce,Pantry,9.6,3,2023-02-14 00:00:00
+98,Lard Lad Sauce,Pantry,3.68,1,2023-01-07 00:00:00

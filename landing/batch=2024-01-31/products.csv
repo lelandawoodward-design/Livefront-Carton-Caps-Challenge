@@ -1,0 +1,101 @@
+product_id,name,category,price,points_per_dollar,created_at
+1,Slurm Cereal,Breakfast,9.49,5,2023-02-16 00:00:00
+2,Bene Gesserit Cereal,Breakfast,7.0,2,2023-05-30 00:00:00
+3,Umbrella Cereal,Breakfast,3.17,2,2023-07-02 00:00:00
+4,Pyramid Deliveries Cereal,Breakfast,5.47,3,2023-10-31 00:00:00
+5,Atari Oatmeal,Breakfast,3.62,5,2023-07-19 00:00:00
+6,Veidt Enterprises Oatmeal,Breakfast,4.29,2,2023-07-24 00:00:00
+7,Rekall Oatmeal,Breakfast,6.8,5,2023-08-02 00:00:00
+8,Krusty Oatmeal,Breakfast,3.19,1,2023-07-30 00:00:00
+9,Atreides Organic Granola Bars,Breakfast,8.61,5,2023-03-29 00:00:00
+10,Replicant Foods Granola Bars,Breakfast,9.92,5,2023-01-05 00:00:00
+11,Nostalgia Granola Bars,Breakfast,2.29,2,2023-07-16 00:00:00
+12,Lard Lad Granola Bars,Breakfast,2.22,3,2023-02-24 00:00:00
+13,Super Porp Yogurt,Breakfast,7.14,1,2023-03-29 00:00:00
+14,Atreides Organic Yogurt,Breakfast,2.15,1,2023-06-25 00:00:00
+15,Shimago-Domínguez Yogurt,Breakfast,4.37,1,2023-05-08 00:00:00
+16,Nostalgia Yogurt,Breakfast,4.9,1,2023-05-13 00:00:00
+17,Gordian Knot Waffles,Breakfast,8.71,2,2023-08-04 00:00:00
+18,Krusty Waffles,Breakfast,6.56,1,2023-03-10 00:00:00
+19,Rekall Waffles,Breakfast,8.62,3,2023-03-23 00:00:00
+20,Nostalgia Waffles,Breakfast,2.71,1,2023-06-25 00:00:00
+21,Popplers Chips,Snacks,8.65,5,2023-08-04 00:00:00
+22,Gunga Diner Chips,Snacks,5.37,2,2023-10-09 00:00:00
+23,Super Porp Chips,Snacks,3.7,3,2023-04-21 00:00:00
+24,OCP Chips,Snacks,4.02,1,2023-03-26 00:00:00
+25,Replicant Foods Crackers,Snacks,4.99,1,2023-06-23 00:00:00
+26,Replicant Foods Crackers,Snacks,5.38,2,2023-07-13 00:00:00
+27,Nostalgia Crackers,Snacks,8.26,2,2023-05-31 00:00:00
+28,Initech Crackers,Snacks,7.72,3,2023-11-22 00:00:00
+29,Atari Cookies,Snacks,9.72,1,2023-11-05 00:00:00
+30,CHOAM Cookies,Snacks,9.33,2,2023-07-26 00:00:00
+31,Replicant Foods Cookies,Snacks,5.07,3,2023-10-01 00:00:00
+32,Replicant Foods Cookies,Snacks,8.93,5,2023-05-18 00:00:00
+33,Wonka Pretzels,Snacks,9.27,5,2023-07-25 00:00:00
+34,Bachelor Chow Pretzels,Snacks,2.71,2,2023-07-03 00:00:00
+35,Soylent Pretzels,Snacks,8.87,2,2023-04-22 00:00:00
+36,Atari Pretzels,Snacks,4.53,5,2023-11-15 00:00:00
+37,Slurm Popcorn,Snacks,8.92,5,2023-04-05 00:00:00
+38,Bene Gesserit Popcorn,Snacks,5.29,3,2023-04-30 00:00:00
+39,Nostalgia Popcorn,Snacks,9.34,1,2023-09-11 00:00:00
+40,CHOAM Popcorn,Snacks,4.08,1,2023-06-05 00:00:00
+41,OCP Plate of Shrimp,Snacks,6.81,3,2023-04-14 00:00:00
+42,CHOAM Plate of Shrimp,Snacks,2.21,1,2023-01-08 00:00:00
+43,Atari Plate of Shrimp,Snacks,3.46,5,2023-01-08 00:00:00
+44,Lard Lad Plate of Shrimp,Snacks,2.01,2,2023-01-15 00:00:00
+45,Bachelor Chow Juice,Beverages,4.5,1,2023-10-07 00:00:00
+46,Super Porp Juice,Beverages,3.99,2,2023-02-01 00:00:00
+47,Rekall Juice,Beverages,5.27,3,2023-04-15 00:00:00
+48,Initech Juice,Beverages,8.98,2,2023-07-22 00:00:00
+49,Super Porp Water,Beverages,7.49,3,2023-07-11 00:00:00
+50,Soylent Water,Beverages,2.67,3,2023-08-31 00:00:00
+51,Cyberdyne Water,Beverages,9.0,2,2023-11-22 00:00:00
+52,Gordian Knot Water,Beverages,2.17,2,2023-10-18 00:00:00
+53,Umbrella Sports Drink,Beverages,3.58,2,2023-11-07 00:00:00
+54,Cyberdyne Sports Drink,Beverages,6.93,3,2023-09-17 00:00:00
+55,Buzz Cola Sports Drink,Beverages,9.65,2,2023-02-15 00:00:00
+56,Krusty Sports Drink,Beverages,2.1,5,2023-04-14 00:00:00
+57,Veidt Enterprises Tea,Beverages,7.38,1,2023-08-10 00:00:00
+58,CHOAM Tea,Beverages,3.62,3,2023-07-08 00:00:00
+59,Bene Gesserit Tea,Beverages,5.94,2,2023-04-26 00:00:00
+60,Pyramid Deliveries Tea,Beverages,3.64,2,2023-07-11 00:00:00
+61,Bene Gesserit Coffee,Beverages,7.41,5,2023-09-01 00:00:00
+62,OCP Coffee,Beverages,8.33,1,2023-07-07 00:00:00
+63,Slurm Coffee,Beverages,3.87,5,2023-07-28 00:00:00
+64,Weyland-Yutani Coffee,Beverages,6.65,5,2023-10-20 00:00:00
+65,Wonka Milk,Dairy,5.74,3,2023-05-13 00:00:00
+66,Rekall Milk,Dairy,3.69,5,2023-04-30 00:00:00
+67,Bene Gesserit Milk,Dairy,6.77,1,2023-10-15 00:00:00
+68,Replicant Foods Milk,Dairy,2.46,3,2023-08-04 00:00:00
+69,Initech Cheese,Dairy,9.26,1,2023-11-30 00:00:00
+70,Slurm Cheese,Dairy,6.03,5,2023-07-01 00:00:00
+71,Cyberdyne Cheese,Dairy,7.36,2,2023-02-19 00:00:00
+72,Duff Cheese,Dairy,6.63,3,2023-09-07 00:00:00
+73,Tyrell Corp Butter,Dairy,5.93,3,2023-04-07 00:00:00
+74,Lard Lad Butter,Dairy,2.71,5,2023-09-21 00:00:00
+75,Slurm Butter,Dairy,2.92,1,2023-09-28 00:00:00
+76,Initech Butter,Dairy,8.96,3,2023-06-01 00:00:00
+77,Gunga Diner Ice Cream,Dairy,5.43,3,2023-01-23 00:00:00
+78,Veidt Enterprises Ice Cream,Dairy,8.08,3,2023-03-13 00:00:00
+79,Popplers Ice Cream,Dairy,5.48,2,2023-06-24 00:00:00
+80,Bene Gesserit Ice Cream,Dairy,9.95,2,2023-02-21 00:00:00
+81,Pyramid Deliveries Cream Cheese,Dairy,9.37,5,2023-11-05 00:00:00
+82,Soylent Cream Cheese,Dairy,3.18,2,2023-08-31 00:00:00
+83,Duff Cream Cheese,Dairy,5.75,2,2023-04-07 00:00:00
+84,OCP Cream Cheese,Dairy,2.92,5,2023-11-12 00:00:00
+85,Umbrella Pasta,Pantry,4.84,5,2023-04-12 00:00:00
+86,Initech Pasta,Pantry,2.89,2,2023-09-30 00:00:00
+87,Weyland-Yutani Pasta,Pantry,2.74,3,2023-09-01 00:00:00
+88,Veidt Enterprises Pasta,Pantry,3.34,3,2023-02-17 00:00:00
+89,Nostalgia Rice,Pantry,7.3,2,2023-02-07 00:00:00
+90,Wonka Rice,Pantry,6.2,2,2023-05-03 00:00:00
+91,Gunga Diner Rice,Pantry,2.6,5,2023-10-15 00:00:00
+92,Nostalgia Rice,Pantry,4.62,3,2023-10-01 00:00:00
+93,Cyberdyne Soup,Pantry,4.98,1,2023-06-20 00:00:00
+94,Lard Lad Soup,Pantry,2.22,5,2023-04-01 00:00:00
+95,Umbrella Soup,Pantry,7.02,3,2023-02-01 00:00:00
+96,Rekall Soup,Pantry,2.04,1,2023-01-01 00:00:00
+97,Shimago-Domínguez Sauce,Pantry,9.6,3,2023-02-14 00:00:00
+98,Lard Lad Sauce,Pantry,3.68,1,2023-01-07 00:00:00
+99,Bachelor Chow Sauce,Pantry,4.58,1,2023-10-27 00:00:00
+100,Replicant Foods Sauce,Pantry,9.61,5,2023-10-16 00:00:00

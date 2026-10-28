@@ -1,0 +1,33 @@
+referral_id,referrer_user_id,referred_email,referred_user_id,referral_code,sent_at,converted_at,status
+10,492,robert.smith875@email.com,772,THOMAS-J947,2023-01-31 02:57:45,2023-02-01 13:09:55,converted
+12,505,barbara.brown42@email.com,27,JAMES-ZPBU,2023-02-03 04:05:07,2023-02-03 08:44:29,converted
+13,623,mnguyen440@yahoo.com,,THOMAS-5RVL,2023-02-03 18:57:14,,sent
+14,120,elewis76@gmail.com,,SUSAN-7646,2023-02-04 04:11:44,,clicked
+15,878,lucia.king37@gmail.com,,SUSAN-ST3U,2023-02-04 05:31:20,,clicked
+16,878,ltaylor341@icloud.com,,SUSAN-ST3U,2023-02-04 13:41:38,,sent
+17,878,elijahwilson2@icloud.com,,SUSAN-ST3U,2023-02-05 07:23:06,,sent
+18,878,liam.scott39@outlook.com,,SUSAN-ST3U,2023-02-06 08:26:02,,sent
+19,878,sophia.thomas34@outlook.com,,SUSAN-ST3U,2023-02-07 14:09:39,,sent
+20,486,jessica.smith73@email.com,491,MICHAEL-QD6X,2023-02-11 10:13:23,2023-02-11 17:42:22,converted
+21,962,kpatel408@icloud.com,,MICHAEL-EZT8,2023-02-11 14:26:46,,sent
+22,846,elijah.torres22@gmail.com,,JOSEPH-N6G9,2023-02-11 15:11:59,,sent
+23,846,mwright501@gmail.com,,JOSEPH-N6G9,2023-02-13 20:52:59,,sent
+24,878,priya.scott70@yahoo.com,,SUSAN-ST3U,2023-02-15 00:53:50,,sent
+25,878,omarrobinson2@icloud.com,,SUSAN-ST3U,2023-02-15 08:17:37,,sent
+26,846,htorres315@icloud.com,,JOSEPH-N6G9,2023-02-16 10:16:25,,sent
+27,878,malikwalker4@email.com,,SUSAN-ST3U,2023-02-18 11:38:33,,clicked
+28,514,patricia.rodriguez804@email.com,508,ELIZABETH-QRFT,2023-02-19 01:48:43,2023-02-19 09:07:46,converted
+29,846,oliviaclark2@gmail.com,,JOSEPH-N6G9,2023-02-19 03:23:23,,sent
+30,878,hannahallen3@yahoo.com,,SUSAN-ST3U,2023-02-19 18:41:11,,sent
+31,846,ava.white51@gmail.com,,JOSEPH-N6G9,2023-02-21 09:35:11,,sent
+32,878,grace.perez86@yahoo.com,,SUSAN-ST3U,2023-02-21 11:36:41,,sent
+33,962,evelyn.patel18@yahoo.com,,MICHAEL-EZT8,2023-02-22 01:27:02,,clicked
+34,623,william.brown953@email.com,629,THOMAS-5RVL,2023-02-22 16:26:08,2023-02-25 21:31:02,converted
+35,724,joseph.miller776@email.com,,THOMAS-EEJD,2023-02-23 02:18:11,,clicked
+36,878,mateoking7@gmail.com,,SUSAN-ST3U,2023-02-24 15:25:06,,sent
+37,878,harper.jackson9@yahoo.com,,SUSAN-ST3U,2023-02-25 06:59:51,,clicked
+38,674,kthomas722@gmail.com,,WILLIAM-KW39,2023-02-25 13:38:10,,clicked
+39,962,awright430@gmail.com,,MICHAEL-EZT8,2023-02-27 08:28:06,,clicked
+40,846,mjackson915@outlook.com,,JOSEPH-N6G9,2023-02-27 14:24:05,,sent
+41,878,slewis149@gmail.com,,SUSAN-ST3U,2023-02-27 17:19:40,,sent
+42,846,ethanwright9@icloud.com,,JOSEPH-N6G9,2023-02-27 18:29:25,,clicked

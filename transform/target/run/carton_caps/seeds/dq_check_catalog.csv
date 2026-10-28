@@ -1,0 +1,13 @@
+
+    
+    
+    
+    create table "carton_caps"."quality"."dq_check_catalog" ("entity" text,"check_name" text,"severity" text,"action" text,"description" text)
+  ;
+    -- dbt seed --
+    
+          COPY "carton_caps"."quality"."dq_check_catalog" FROM 'C:\Users\lelan\OneDrive\Desktop\source\carton-caps-analytics\transform\seeds\dq_check_catalog.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  

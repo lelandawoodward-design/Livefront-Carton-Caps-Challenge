@@ -1,0 +1,12 @@
+referral_id,referrer_user_id,referred_email,referred_user_id,referral_code,sent_at,converted_at,status
+1,486,jennifer.jones64@email.com,547,MICHAEL-QD6X,2023-01-17 05:20:39,2023-01-17 11:57:18,converted
+2,486,barbara.hernandez271@email.com,236,MICHAEL-QD6X,2023-01-18 09:48:47,2023-01-18 17:47:19,converted
+3,396,joseph.miller700@email.com,846,MARY-TW4L,2023-01-19 03:11:31,2023-01-19 12:36:11,converted
+4,827,susan.garcia701@email.com,876,SUSAN-28EH,2023-01-19 09:13:48,2023-01-19 14:08:14,converted
+5,396,ava.clark12@yahoo.com,,MARY-TW4L,2023-01-26 02:01:17,,sent
+6,505,owhite45@gmail.com,,JAMES-ZPBU,2023-01-26 03:15:33,,sent
+7,396,jessica.rodriguez254@email.com,258,MARY-TW4L,2023-01-26 20:52:00,2023-01-26 19:52:00,converted
+8,827,ava.wright93@gmail.com,,SUSAN-28EH,2023-01-28 17:46:24,,sent
+9,878,wei.white3@yahoo.com,,SUSAN-ST3U,2023-01-29 09:36:50,,sent
+10,492,robert.smith875@email.com,,THOMAS-J947,2023-01-31 02:57:45,,clicked
+11,878,william.jones306@email.com,483,SUSAN-ST3U,2023-01-31 16:47:04,2023-01-31 18:44:28,converted

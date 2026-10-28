@@ -1,0 +1,22 @@
+district,city,state,income_level,median_household_income
+"Fairview, CA",Fairview,CA,middle,72000
+"Fairview, IL",Fairview,IL,low,55000
+"Fairview, NY",Fairview,NY,low,54000
+"Fairview, TX",Fairview,TX,middle,71000
+"Georgetown, CA",Georgetown,CA,low,39000
+"Georgetown, FL",Georgetown,FL,middle,69000
+"Georgetown, NY",Georgetown,NY,high,154000
+"Madison, CA",Madison,CA,low,51000
+"Madison, FL",Madison,FL,low,42000
+"Madison, IL",Madison,IL,middle,62000
+"Madison, NY",Madison,NY,high,133000
+"Madison, TX",Madison,TX,middle,78000
+"Riverside, CA",Riverside,CA,middle,60000
+"Riverside, FL",Riverside,FL,high,140000
+"Riverside, NY",Riverside,NY,middle,82000
+"Riverside, TX",Riverside,TX,middle,73000
+"Springfield, CA",Springfield,CA,low,47000
+"Springfield, FL",Springfield,FL,high,140000
+"Springfield, IL",Springfield,IL,high,140000
+"Springfield, NY",Springfield,NY,middle,83000
+"Springfield, TX",Springfield,TX,middle,80000

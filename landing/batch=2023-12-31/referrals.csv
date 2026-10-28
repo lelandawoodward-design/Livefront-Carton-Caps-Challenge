@@ -1,0 +1,188 @@
+referral_id,referrer_user_id,referred_email,referred_user_id,referral_code,sent_at,converted_at,status
+803,193,mateo.perez9@outlook.com,,JOSEPH-58QD,2023-12-01 12:39:35,,sent
+804,583,awilson955@outlook.com,,WILLIAM-H9RX,2023-12-01 12:50:53,,sent
+805,919,malikwright2@gmail.com,,JAMES-8JB8,2023-12-01 20:23:50,,clicked
+806,133,dlewis925@yahoo.com,,JOHN-SHGL,2023-12-01 21:36:12,,sent
+807,879,dclark533@yahoo.com,,MARY-EA69,2023-12-02 00:17:48,,sent
+808,714,amelia.kim61@icloud.com,,BARBARA-6RDD,2023-12-02 00:25:04,,sent
+809,631,elijahjackson5@icloud.com,,PATRICIA-2S6Q,2023-12-02 00:37:20,,clicked
+810,982,lwright294@yahoo.com,,MARY-DR4R,2023-12-02 05:50:19,,sent
+811,49,hannah.hill9@email.com,,WILLIAM-6WBT,2023-12-02 13:42:16,,sent
+812,734,fatima.hill16@outlook.com,,THOMAS-4CGJ,2023-12-02 16:05:43,,sent
+813,754,alewis664@email.com,,MICHAEL-ZXKL,2023-12-02 22:40:49,,sent
+814,188,hkim682@icloud.com,,SUSAN-PYRF,2023-12-03 12:30:12,,sent
+815,989,evelyn.walker12@outlook.com,,ELIZABETH-PC9Q,2023-12-03 23:47:31,,sent
+816,333,lucia.young14@gmail.com,,JOHN-XTGL,2023-12-04 00:26:46,,sent
+817,737,oharris905@gmail.com,,THOMAS-YWN7,2023-12-04 00:50:48,,sent
+818,189,mia.king85@gmail.com,,PATRICIA-QALX,2023-12-04 01:56:37,,sent
+819,534,william.martinez318@email.com,148,MICHAEL-CBUY,2023-12-04 03:28:26,2023-12-04 13:05:03,converted
+820,133,diego.jackson96@gmail.com,,JOHN-SHGL,2023-12-04 16:52:21,,clicked
+821,857,elijah.kim62@outlook.com,,WILLIAM-JDXD,2023-12-04 17:45:01,,clicked
+822,754,kaithompson7@gmail.com,,MICHAEL-ZXKL,2023-12-05 06:10:47,,clicked
+823,654,pthomas775@icloud.com,,SUSAN-JXVY,2023-12-05 21:16:56,,sent
+824,196,npatel30@outlook.com,,JAMES-HGDZ,2023-12-06 01:18:52,,clicked
+825,193,ava.torres34@outlook.com,,JOSEPH-58QD,2023-12-06 10:58:54,,clicked
+826,981,emma.allen73@icloud.com,,MARY-LP34,2023-12-06 12:10:27,,clicked
+827,621,lucia.harris31@outlook.com,,JAMES-G3EC,2023-12-06 13:49:30,,clicked
+828,989,evelyn.patel61@outlook.com,,ELIZABETH-PC9Q,2023-12-06 15:10:55,,clicked
+829,487,robert.jones381@email.com,167,BARBARA-Q9HH,2023-12-06 15:17:08,2023-12-06 17:59:40,converted
+830,714,amelia.harris71@yahoo.com,,BARBARA-6RDD,2023-12-07 03:41:00,,clicked
+831,555,joseph.lopez769@email.com,,WILLIAM-SA4Q,2023-12-07 15:07:17,,sent
+832,919,mateo.perez9@outlook.com,,JAMES-8JB8,2023-12-07 15:21:01,,sent
+833,196,eperez923@email.com,,JAMES-HGDZ,2023-12-07 19:51:11,,clicked
+834,883,grace.king86@email.com,,MARY-ABB4,2023-12-08 01:08:57,,sent
+835,621,ethanscott9@gmail.com,,JAMES-G3EC,2023-12-08 08:13:00,,clicked
+836,569,owilson384@outlook.com,,RICHARD-K7W4,2023-12-08 18:47:43,,sent
+837,621,fnguyen398@gmail.com,,JAMES-G3EC,2023-12-09 05:17:22,,sent
+838,239,james.brown943@email.com,395,SARAH-6KVP,2023-12-09 08:13:05,2023-12-09 15:26:08,converted
+839,569,harperking3@yahoo.com,,RICHARD-K7W4,2023-12-09 09:18:16,,sent
+840,216,david.brown65@email.com,877,BARBARA-BJHD,2023-12-09 10:44:25,2023-12-09 17:22:54,converted
+841,346,hannah.young92@gmail.com,,JESSICA-DR3V,2023-12-09 10:48:05,,clicked
+842,334,barbara.davis464@email.com,,BARBARA-TS74,2023-12-09 14:57:48,,clicked
+843,366,evelyn.clark57@outlook.com,,MARY-DCK8,2023-12-09 15:11:47,,sent
+844,621,llee117@gmail.com,,JAMES-G3EC,2023-12-10 00:19:32,,clicked
+845,133,olivia.lewis38@outlook.com,,JOHN-SHGL,2023-12-10 10:35:10,,sent
+846,424,sophia.jackson77@outlook.com,,RICHARD-6ADC,2023-12-10 14:22:15,,sent
+847,346,egreen261@yahoo.com,,JESSICA-DR3V,2023-12-10 18:33:48,,sent
+848,838,ava.hill47@outlook.com,,ROBERT-B5GF,2023-12-10 19:48:17,,sent
+849,449,wei.nguyen74@yahoo.com,,ELIZABETH-RL54,2023-12-10 22:07:57,,sent
+850,569,pyoung217@gmail.com,,RICHARD-K7W4,2023-12-10 23:54:07,,clicked
+851,810,mateo.wilson30@icloud.com,,JOSEPH-CMRN,2023-12-11 00:57:03,,clicked
+852,346,malikwalker3@gmail.com,,JESSICA-DR3V,2023-12-11 02:56:52,,clicked
+853,346,malikwalker3@gmail.com,,JESSICA-DR3V,2023-12-11 03:03:52,,sent
+854,205,mateo.thomas65@email.com,,THOMAS-9BUC,2023-12-11 05:22:46,,sent
+855,133,wei.thompson46@yahoo.com,,JOHN-SHGL,2023-12-11 10:58:13,,sent
+856,326,mia.perez66@yahoo.com,,SUSAN-56E4,2023-12-11 12:58:04,,clicked
+857,333,zoe.kim42@gmail.com,,JOHN-XTGL,2023-12-11 17:57:44,,clicked
+858,916,diego.anderson61@gmail.com,,RICHARD-8J87,2023-12-12 01:23:32,,clicked
+859,989,emartin927@outlook.com,,ELIZABETH-PC9Q,2023-12-12 03:23:08,,clicked
+860,346,erobinson469@gmail.com,,JESSICA-DR3V,2023-12-12 05:04:07,,clicked
+861,193,robert.davis340@email.com,78,JOSEPH-58QD,2023-12-12 06:39:06,2023-12-14 09:40:17,converted
+862,189,john.martinez331@email.com,60,PATRICIA-QALX,2023-12-12 12:53:26,2023-12-12 20:50:08,converted
+863,845,richard.smith383@email.com,497,RICHARD-ULWJ,2023-12-12 18:00:41,2023-12-13 16:49:52,converted
+864,346,kai.king91@gmail.com,,JESSICA-DR3V,2023-12-12 20:26:50,,sent
+865,600,robert.williams484@email.com,172,JESSICA-CR4J,2023-12-13 04:58:05,2023-12-13 12:56:38,converted
+866,339,mateo.martin42@icloud.com,,MICHAEL-XHDP,2023-12-13 08:07:13,,sent
+867,135,sanderson370@gmail.com,,THOMAS-WL3Z,2023-12-13 15:26:00,,sent
+868,933,mateoanderson3@outlook.com,,LINDA-CFD2,2023-12-14 00:21:30,,sent
+869,754,aharris918@yahoo.com,,MICHAEL-ZXKL,2023-12-14 00:29:35,,sent
+870,393,richard.williams112@email.com,916,BARBARA-WPHD,2023-12-14 06:53:04,2023-12-14 09:49:16,converted
+871,307,ekim664@icloud.com,,THOMAS-XQS5,2023-12-14 07:03:06,,sent
+872,723,elijah.hill93@yahoo.com,,JOHN-HRTK,2023-12-14 13:52:50,,clicked
+873,754,sophiawhite6@gmail.com,,MICHAEL-ZXKL,2023-12-14 14:20:30,,clicked
+874,240,mia.lee77@outlook.com,,ELIZABETH-E3GN,2023-12-14 15:26:58,,sent
+875,196,epatel547@outlook.com,,JAMES-HGDZ,2023-12-14 19:42:36,,sent
+876,411,elijahharris7@outlook.com,,PATRICIA-UTWG,2023-12-15 02:43:26,,sent
+877,906,liam.torres49@outlook.com,,JAMES-3QTH,2023-12-15 08:51:39,,sent
+878,569,harper.thomas44@gmail.com,,RICHARD-K7W4,2023-12-15 13:50:10,,clicked
+879,857,wwhite39@outlook.com,,WILLIAM-JDXD,2023-12-15 17:44:15,,sent
+880,346,diego.wright57@outlook.com,,JESSICA-DR3V,2023-12-16 02:42:09,,sent
+881,919,elijah.walker27@outlook.com,,JAMES-8JB8,2023-12-16 04:59:23,,sent
+882,239,joseph.lopez769@email.com,679,SARAH-6KVP,2023-12-16 09:27:40,2023-12-16 12:57:35,converted
+883,193,ethomas711@icloud.com,,JOSEPH-58QD,2023-12-16 11:03:04,,sent
+884,380,mia.nguyen15@outlook.com,,ELIZABETH-BCJG,2023-12-16 13:42:25,,clicked
+885,910,hannah.perez70@gmail.com,,SARAH-MJ3R,2023-12-16 20:47:33,,sent
+886,240,miathompson2@email.com,,ELIZABETH-E3GN,2023-12-16 22:33:59,,sent
+887,989,lallen893@outlook.com,,ELIZABETH-PC9Q,2023-12-17 02:45:52,,sent
+888,196,fatima.jackson72@gmail.com,,JAMES-HGDZ,2023-12-17 07:57:08,,clicked
+889,963,mhill649@email.com,,BARBARA-CKNJ,2023-12-17 08:57:50,,clicked
+890,262,kai.king95@gmail.com,,JOSEPH-V6RG,2023-12-17 12:06:14,,sent
+891,119,richard.garcia462@email.com,308,SARAH-HBC5,2023-12-17 14:29:14,2023-12-17 17:53:29,converted
+892,240,ethan.martin54@email.com,,ELIZABETH-E3GN,2023-12-17 16:34:03,,sent
+893,583,zanderson103@gmail.com,,WILLIAM-H9RX,2023-12-17 16:36:07,,clicked
+894,31,noah.jackson12@outlook.com,,RICHARD-2ECX,2023-12-18 05:45:50,,sent
+895,569,ewalker922@gmail.com,,RICHARD-K7W4,2023-12-18 07:42:08,,sent
+896,943,mateo.thomas23@gmail.com,,JAMES-4EFP,2023-12-18 21:42:36,,clicked
+897,877,miaking3@outlook.com,,DAVID-6VUH,2023-12-18 23:19:09,,sent
+898,411,hannahtorres4@gmail.com,,PATRICIA-UTWG,2023-12-19 02:45:32,,clicked
+899,346,mscott17@outlook.com,,JESSICA-DR3V,2023-12-19 07:14:05,,sent
+900,424,olivia.allen65@icloud.com,,RICHARD-6ADC,2023-12-19 08:59:00,,sent
+901,418,ava.lewis28@yahoo.com,,JOSEPH-C9F9,2023-12-19 11:47:13,,clicked
+902,196,evelynwhite4@gmail.com,,JAMES-HGDZ,2023-12-19 15:24:43,,sent
+903,240,htorres732@gmail.com,,ELIZABETH-E3GN,2023-12-19 17:28:19,,clicked
+904,361,zoe.robinson78@icloud.com,,JOHN-77MV,2023-12-19 20:58:06,,sent
+905,989,mateo.walker77@icloud.com,,ELIZABETH-PC9Q,2023-12-20 06:59:01,,sent
+906,721,wwalker270@yahoo.com,,LINDA-X42C,2023-12-20 08:08:36,,sent
+907,499,ava.robinson47@gmail.com,,BARBARA-X8S5,2023-12-20 17:27:46,,sent
+908,326,andre.robinson63@email.com,,SUSAN-56E4,2023-12-21 01:37:59,,clicked
+909,449,gpatel809@icloud.com,,ELIZABETH-RL54,2023-12-21 05:52:36,,sent
+910,737,lucasscott8@icloud.com,,THOMAS-YWN7,2023-12-21 06:53:09,,sent
+911,346,elijah.young24@icloud.com,,JESSICA-DR3V,2023-12-21 16:57:59,,clicked
+912,432,ava.king56@icloud.com,,JENNIFER-TVEE,2023-12-21 22:02:55,,clicked
+913,754,zoe.green49@gmail.com,,MICHAEL-ZXKL,2023-12-22 07:09:13,,sent
+914,395,aaliyahwilson1@icloud.com,,JAMES-JDDL,2023-12-22 08:40:44,,sent
+915,945,malik.green70@yahoo.com,,WILLIAM-H9H7,2023-12-22 10:00:22,,clicked
+916,572,kai.thompson98@gmail.com,,JAMES-CD74,2023-12-22 12:05:39,,sent
+917,906,amelia.taylor28@outlook.com,,JAMES-3QTH,2023-12-22 12:52:08,,sent
+918,382,susan.jones23@email.com,991,DAVID-DCGT,2023-12-22 13:19:28,2023-12-22 18:40:08,converted
+919,346,patricia.miller821@email.com,141,JESSICA-DR3V,2023-12-22 14:37:03,2023-12-22 22:11:43,converted
+920,569,evelyn.anderson28@email.com,,RICHARD-K7W4,2023-12-22 19:39:10,,sent
+921,721,priya.patel73@gmail.com,,LINDA-X42C,2023-12-23 03:09:03,,sent
+922,193,djackson788@outlook.com,,JOSEPH-58QD,2023-12-23 04:01:05,,sent
+923,721,emma.martin49@outlook.com,,LINDA-X42C,2023-12-23 05:31:54,,clicked
+924,240,gracejackson5@gmail.com,,ELIZABETH-E3GN,2023-12-23 06:35:01,,sent
+925,857,hwhite572@icloud.com,,WILLIAM-JDXD,2023-12-23 06:35:04,,sent
+926,877,nwilson741@gmail.com,,DAVID-6VUH,2023-12-23 09:45:01,,clicked
+927,621,hperez55@yahoo.com,,JAMES-G3EC,2023-12-23 17:00:07,,clicked
+928,366,escott999@yahoo.com,,MARY-DCK8,2023-12-23 18:26:51,,clicked
+929,449,noah.walker77@gmail.com,,ELIZABETH-RL54,2023-12-23 20:46:25,,clicked
+930,196,wei.jackson73@outlook.com,,JAMES-HGDZ,2023-12-23 23:40:21,,clicked
+931,196,awalker121@yahoo.com,,JAMES-HGDZ,2023-12-24 02:48:53,,sent
+932,721,dtaylor125@icloud.com,,LINDA-X42C,2023-12-24 05:36:51,,sent
+933,395,ameliathomas3@gmail.com,,JAMES-JDDL,2023-12-24 07:44:23,,clicked
+934,380,barbara.jones354@email.com,180,ELIZABETH-BCJG,2023-12-24 09:39:22,2023-12-24 13:04:36,converted
+935,321,evelyn.wilson67@email.com,,RICHARD-TYU3,2023-12-24 15:20:16,,sent
+936,654,aaliyah.green3@yahoo.com,,SUSAN-JXVY,2023-12-24 18:26:01,,sent
+937,962,david.jones986@email.com,283,MICHAEL-EZT8,2023-12-24 20:51:58,2023-12-25 11:12:58,converted
+938,870,jennifer.jones281@email.com,46,JAMES-TFR9,2023-12-25 07:38:59,2023-12-25 18:08:38,converted
+939,418,wperez564@email.com,,JOSEPH-C9F9,2023-12-25 10:02:30,,sent
+940,196,zlee904@yahoo.com,,JAMES-HGDZ,2023-12-25 10:07:20,,sent
+941,60,skim840@outlook.com,,JOHN-PJ5N,2023-12-25 10:39:16,,sent
+942,679,wei.moore28@outlook.com,,JOSEPH-CD9Z,2023-12-25 12:53:24,,sent
+943,877,noah.walker17@gmail.com,,DAVID-6VUH,2023-12-25 23:57:13,,clicked
+944,989,harper.king33@icloud.com,,ELIZABETH-PC9Q,2023-12-26 00:21:00,,clicked
+945,945,omoore333@gmail.com,,WILLIAM-H9H7,2023-12-26 00:33:45,,sent
+946,621,alee710@gmail.com,,JAMES-G3EC,2023-12-26 02:44:44,,sent
+947,487,thomas.jones980@email.com,208,BARBARA-Q9HH,2023-12-26 03:31:48,2023-12-26 12:12:10,converted
+948,916,jennifer.johnson12@email.com,389,RICHARD-8J87,2023-12-26 09:30:50,2023-12-26 18:47:53,converted
+949,23,patricia.rodriguez705@email.com,614,JOSEPH-A2VB,2023-12-27 02:24:25,2023-12-29 13:14:01,converted
+950,196,eyoung327@yahoo.com,,JAMES-HGDZ,2023-12-27 04:13:17,,sent
+951,877,harper.robinson45@gmail.com,,DAVID-6VUH,2023-12-27 09:13:40,,sent
+952,60,noahharris6@yahoo.com,,JOHN-PJ5N,2023-12-27 17:09:32,,sent
+953,919,lucas.thomas77@gmail.com,,JAMES-8JB8,2023-12-27 18:36:54,,clicked
+954,919,zoe.white44@yahoo.com,,JAMES-8JB8,2023-12-28 00:59:25,,sent
+955,827,james.hernandez663@email.com,478,SUSAN-28EH,2023-12-28 07:25:20,2023-12-28 15:09:01,converted
+956,148,diego.thomas40@email.com,,WILLIAM-SDKE,2023-12-28 08:15:45,,clicked
+957,60,wei.jackson73@outlook.com,,JOHN-PJ5N,2023-12-28 10:11:32,,sent
+958,308,alee282@gmail.com,,RICHARD-EK6D,2023-12-29 01:47:49,,sent
+959,193,harper.nguyen86@gmail.com,,JOSEPH-58QD,2023-12-29 02:14:28,,clicked
+960,308,olivia.moore48@yahoo.com,,RICHARD-EK6D,2023-12-29 09:43:01,,sent
+961,877,amelia.moore31@icloud.com,,DAVID-6VUH,2023-12-29 14:58:43,,sent
+962,240,olivia.thompson96@icloud.com,,ELIZABETH-E3GN,2023-12-29 15:46:02,,clicked
+963,361,zoe.wright7@email.com,,JOHN-77MV,2023-12-29 17:43:31,,sent
+964,449,liam.clark4@email.com,,ELIZABETH-RL54,2023-12-29 21:41:27,,sent
+965,240,mwilson797@gmail.com,,ELIZABETH-E3GN,2023-12-29 21:51:33,,sent
+966,308,zoe.white42@outlook.com,,RICHARD-EK6D,2023-12-29 23:00:18,,clicked
+967,721,emma.martin23@gmail.com,,LINDA-X42C,2023-12-30 00:50:21,,clicked
+968,60,mwhite580@icloud.com,,JOHN-PJ5N,2023-12-30 01:35:00,,sent
+969,449,evelyn.lewis19@gmail.com,,ELIZABETH-RL54,2023-12-30 01:36:36,,sent
+970,621,ava.martin68@gmail.com,,JAMES-G3EC,2023-12-30 02:31:06,,sent
+971,196,luciaperez7@icloud.com,,JAMES-HGDZ,2023-12-30 06:13:46,,sent
+972,589,elijah.scott89@gmail.com,,THOMAS-72KW,2023-12-30 09:25:55,,sent
+973,721,wei.robinson64@gmail.com,,LINDA-X42C,2023-12-30 11:23:59,,clicked
+974,193,lucia.allen13@email.com,,JOSEPH-58QD,2023-12-30 13:22:37,,sent
+975,621,lwright294@yahoo.com,,JAMES-G3EC,2023-12-30 14:40:06,,sent
+976,308,weimoore6@gmail.com,,RICHARD-EK6D,2023-12-30 15:17:12,,clicked
+977,866,andre.thomas48@outlook.com,,JENNIFER-VZWK,2023-12-30 17:24:20,,sent
+978,60,lucia.allen51@yahoo.com,,JOHN-PJ5N,2023-12-31 03:06:06,,sent
+979,898,omar.allen9@icloud.com,,MICHAEL-R3V7,2023-12-31 04:25:41,,sent
+980,730,mtaylor150@gmail.com,,PATRICIA-F846,2023-12-31 08:36:29,,clicked
+981,718,emma.hill12@gmail.com,,MARY-LA8T,2023-12-31 11:04:26,,sent
+982,362,robert.williams401@email.com,,BARBARA-H6JE,2023-12-31 11:46:42,,clicked
+983,730,olivia.harris76@gmail.com,,PATRICIA-F846,2023-12-31 14:28:37,,clicked
+984,721,ava.wilson71@yahoo.com,,LINDA-X42C,2023-12-31 17:14:00,,sent
+985,196,mscott579@gmail.com,,JAMES-HGDZ,2023-12-31 18:16:49,,sent
+986,877,mhill125@yahoo.com,,DAVID-6VUH,2023-12-31 19:17:53,,sent
+987,730,hannahanderson9@email.com,,PATRICIA-F846,2023-12-31 21:30:54,,sent
+988,989,amartin90@outlook.com,,ELIZABETH-PC9Q,2023-12-31 22:23:19,,sent
+989,60,ethan.lee48@gmail.com,,JOHN-PJ5N,2023-12-31 23:08:20,,clicked
