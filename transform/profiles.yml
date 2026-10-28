@@ -1,0 +1,12 @@
+carton_caps:
+  target: local
+  outputs:
+    local:
+      type: duckdb
+      # Set by `python -m pipeline`; points at warehouse/carton_caps.duckdb by default.
+      path: "{{ env_var('CARTON_CAPS_WAREHOUSE') }}"
+      threads: 4
+      # Write the file in DuckDB's v1.0 storage format so DuckDB 1.x tools can open it
+      # (same setting as pipeline/config.py; only applies when dbt creates the file).
+      config_options:
+        storage_compatibility_version: v1.0.0

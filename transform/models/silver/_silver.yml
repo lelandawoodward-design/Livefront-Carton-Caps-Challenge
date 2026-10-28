@@ -1,0 +1,183 @@
+version: 2
+
+models:
+  - name: schools_current
+    description: Current schools from the latest snapshot, typed.
+    columns:
+      - name: school_id
+        data_tests: [unique, not_null]
+      - name: school_name
+        data_tests: [not_null]
+
+  - name: districts_current
+    description: School districts (a school's city and state) with income level, from the latest snapshot.
+    columns:
+      - name: district
+        data_tests: [unique, not_null]
+      - name: income_level
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['low', 'middle', 'high']
+      - name: median_household_income
+        data_tests:
+          - expression_is_true:
+              arguments:
+                expression: "median_household_income > 0"
+
+  - name: products_current
+    description: Current product catalog from the latest snapshot, typed.
+    columns:
+      - name: product_id
+        data_tests: [unique, not_null]
+      - name: category
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Breakfast', 'Snacks', 'Beverages', 'Dairy', 'Pantry']
+      - name: list_price
+        data_tests:
+          - expression_is_true:
+              arguments:
+                expression: "list_price > 0"
+      - name: points_per_dollar
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [1, 2, 3, 5]
+                quote: false
+
+  - name: users_current
+    description: >
+      Current users from the latest snapshot, typed and validated. Names and raw
+      emails are not carried past bronze; email_hash is a keyed hash of the
+      normalised address.
+    columns:
+      - name: user_id
+        data_tests: [unique, not_null]
+      - name: dq_status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['valid', 'quarantined']
+
+  - name: purchases_typed
+    description: Every bronze purchase row, typed (one row per arrival, duplicates included).
+
+  - name: referrals_typed
+    description: Every bronze referral row, typed (one row per version), with the invited email hashed.
+
+  - name: purchases_checked
+    description: >
+      One row per purchase record with its data-quality verdict. Incremental
+      (merge on record_key); re-evaluates new, quarantined and natural-key-peer
+      records each run. See the model SQL for details.
+    columns:
+      - name: record_key
+        data_tests: [unique, not_null]
+      - name: dq_status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['valid', 'quarantined']
+      - name: points_expected
+        description: floor(price_paid x points_per_dollar); used downstream in place of the reported value.
+
+  - name: referrals_checked
+    description: >
+      One row per referral invite in its latest state, with its data-quality
+      verdict. Incremental (merge on record_key).
+    columns:
+      - name: record_key
+        data_tests: [unique, not_null]
+      - name: dq_status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['valid', 'quarantined']
+      - name: status
+        description: sent, clicked or converted for valid rows.
+
+unit_tests:
+  - name: purchases_duplicates_repairs_and_quarantine
+    description: >
+      Exact duplicates collapse to one valid row; a client retry under a new id
+      is quarantined; a wrong points value is repaired, not quarantined; an
+      unknown product and a purchase before signup are quarantined.
+    model: purchases_checked
+    overrides:
+      macros:
+        is_incremental: false
+    given:
+      - input: ref('purchases_typed')
+        rows:
+          # 1: clean, arrives twice (replayed upload)
+          - {record_key: '1', purchase_id: 1, user_id: 10, product_id: 100, quantity: 2, price_paid: 10.00, points_reported: 20, purchased_at: '2024-01-05 10:00:00', day_of_week_reported: Friday, hour_of_day_reported: 10, content_hash: a, natural_key: n1, _batch_id: '2024-01-31', _row_number: 1}
+          - {record_key: '1', purchase_id: 1, user_id: 10, product_id: 100, quantity: 2, price_paid: 10.00, points_reported: 20, purchased_at: '2024-01-05 10:00:00', day_of_week_reported: Friday, hour_of_day_reported: 10, content_hash: a, natural_key: n1, _batch_id: '2024-01-31', _row_number: 2}
+          # 2: same content as 1 under a new id (client retry)
+          - {record_key: '2', purchase_id: 2, user_id: 10, product_id: 100, quantity: 2, price_paid: 10.00, points_reported: 20, purchased_at: '2024-01-05 10:00:00', day_of_week_reported: Friday, hour_of_day_reported: 10, content_hash: b, natural_key: n1, _batch_id: '2024-01-31', _row_number: 3}
+          # 3: points should be floor(4.99 x 2) = 9
+          - {record_key: '3', purchase_id: 3, user_id: 10, product_id: 100, quantity: 1, price_paid: 4.99, points_reported: 30, purchased_at: '2024-01-06 11:00:00', day_of_week_reported: Saturday, hour_of_day_reported: 11, content_hash: c, natural_key: n3, _batch_id: '2024-01-31', _row_number: 4}
+          # 4: product not in catalog
+          - {record_key: '4', purchase_id: 4, user_id: 10, product_id: 999, quantity: 1, price_paid: 5.00, points_reported: 5, purchased_at: '2024-01-07 12:00:00', day_of_week_reported: Sunday, hour_of_day_reported: 12, content_hash: d, natural_key: n4, _batch_id: '2024-01-31', _row_number: 5}
+          # 5: purchased before the user signed up
+          - {record_key: '5', purchase_id: 5, user_id: 10, product_id: 100, quantity: 1, price_paid: 5.00, points_reported: 10, purchased_at: '2023-12-01 09:00:00', day_of_week_reported: Friday, hour_of_day_reported: 9, content_hash: e, natural_key: n5, _batch_id: '2024-01-31', _row_number: 6}
+      - input: ref('products_current')
+        rows:
+          - {product_id: 100, list_price: 5.00, points_per_dollar: 2}
+      - input: ref('users_current')
+        rows:
+          - {user_id: 10, signup_at: '2024-01-01 08:00:00', dq_status: valid}
+      - input: ref('dq_check_catalog')
+        format: csv
+        fixture: dq_check_catalog_fixture
+      - input: source('meta', 'ingested_files')
+        rows:
+          - {batch_id: '2024-02-29'}
+    expect:
+      rows:
+        - {record_key: '1', copies: 2, dq_status: valid, dq_issues_text: exact_duplicate, points_expected: 20}
+        - {record_key: '2', copies: 1, dq_status: quarantined, dq_issues_text: retry_duplicate, points_expected: 20}
+        - {record_key: '3', copies: 1, dq_status: valid, dq_issues_text: points_mismatch, points_expected: 9}
+        - {record_key: '4', copies: 1, dq_status: quarantined, dq_issues_text: orphan_product, points_expected: null}
+        - {record_key: '5', copies: 1, dq_status: quarantined, dq_issues_text: before_signup, points_expected: 10}
+
+  - name: referrals_latest_version_and_fraud_checks
+    description: >
+      The latest version of an invite wins; a self-referral, a repeat send within
+      24 hours and a "conversion" of an existing member are quarantined.
+    model: referrals_checked
+    overrides:
+      macros:
+        is_incremental: false
+    given:
+      - input: ref('referrals_typed')
+        rows:
+          # 1: clicked in January, converted in February
+          - {record_key: '1', referral_id: 1, referrer_user_id: 10, referred_email_hash: h_new, sent_at: '2024-01-30 20:00:00', status: clicked, content_hash: a1, _batch_id: '2024-01-31', _row_number: 1}
+          - {record_key: '1', referral_id: 1, referrer_user_id: 10, referred_email_hash: h_new, referred_user_id: 30, sent_at: '2024-01-30 20:00:00', converted_at: '2024-02-01 09:00:00', status: converted, content_hash: a2, _batch_id: '2024-02-29', _row_number: 1}
+          # 2: invite to the referrer's own address
+          - {record_key: '2', referral_id: 2, referrer_user_id: 10, referred_email_hash: h_10, sent_at: '2024-02-03 10:00:00', status: sent, content_hash: b, _batch_id: '2024-02-29', _row_number: 2}
+          # 3 and 4: same referrer, same address, 5 minutes apart
+          - {record_key: '3', referral_id: 3, referrer_user_id: 10, referred_email_hash: h_friend, sent_at: '2024-02-05 10:00:00', status: clicked, content_hash: c, _batch_id: '2024-02-29', _row_number: 3}
+          - {record_key: '4', referral_id: 4, referrer_user_id: 10, referred_email_hash: h_friend, sent_at: '2024-02-05 10:05:00', status: sent, content_hash: d, _batch_id: '2024-02-29', _row_number: 4}
+          # 5: "converted" to user 20, who joined long before the invite
+          - {record_key: '5', referral_id: 5, referrer_user_id: 10, referred_email_hash: h_20, referred_user_id: 20, sent_at: '2024-02-10 10:00:00', converted_at: '2024-02-10 12:00:00', status: converted, content_hash: e, _batch_id: '2024-02-29', _row_number: 5}
+      - input: ref('users_current')
+        rows:
+          - {user_id: 10, email_hash: h_10, signup_at: '2023-08-01 08:00:00', dq_status: valid}
+          - {user_id: 20, email_hash: h_20, signup_at: '2023-09-01 08:00:00', dq_status: valid}
+          - {user_id: 30, email_hash: h_new, signup_at: '2024-02-01 09:00:00', dq_status: valid}
+      - input: ref('dq_check_catalog')
+        format: csv
+        fixture: dq_check_catalog_fixture
+      - input: source('meta', 'ingested_files')
+        rows:
+          - {batch_id: '2024-02-29'}
+    expect:
+      rows:
+        - {record_key: '1', status: converted, versions: 2, dq_status: valid, dq_issues_text: ''}
+        - {record_key: '2', status: sent, versions: 1, dq_status: quarantined, dq_issues_text: self_referral}
+        - {record_key: '3', status: clicked, versions: 1, dq_status: valid, dq_issues_text: ''}
+        - {record_key: '4', status: sent, versions: 1, dq_status: quarantined, dq_issues_text: duplicate_send}
+        - {record_key: '5', status: converted, versions: 1, dq_status: quarantined, dq_issues_text: existing_member}

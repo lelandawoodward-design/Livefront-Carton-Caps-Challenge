@@ -1,0 +1,28 @@
+entity,check_name,severity,action,description
+purchases,unparseable_or_missing,error,quarantine,"A key, timestamp, quantity or amount is missing or cannot be parsed"
+purchases,conflicting_duplicate,error,quarantine,The same purchase_id arrived with different content
+purchases,exact_duplicate,warn,drop_extra_copies,The same purchase_id arrived more than once with identical content (replayed upload); one copy is kept
+purchases,retry_duplicate,warn,quarantine,"Same user, product, timestamp, quantity and amount as an earlier purchase_id (client retry)"
+purchases,orphan_product,error,quarantine,product_id is not in the product catalog
+purchases,orphan_user,error,quarantine,user_id is not in users (re-checked every run in case the user arrives later)
+purchases,user_quarantined,error,quarantine,The purchasing user is quarantined
+purchases,non_positive_quantity,error,quarantine,Quantity is zero or negative
+purchases,price_out_of_range,error,quarantine,"price_paid is not positive, exceeds the list amount, or is below min_price_ratio of it"
+purchases,before_signup,error,quarantine,Purchased before the user signed up
+purchases,future_timestamp,error,quarantine,Purchased after the cutoff of the batch it arrived in
+purchases,points_mismatch,warn,repair,points_earned differs from floor(price_paid x points_per_dollar); the rule value is used
+purchases,derived_field_mismatch,warn,repair,day_of_week or hour_of_day disagree with purchased_at; recomputed from the timestamp
+referrals,unparseable_or_missing,error,quarantine,"referral_id, referrer, sent_at or status is missing or cannot be parsed"
+referrals,conflicting_duplicate,error,quarantine,The same referral_id arrived twice in one batch with different content
+referrals,invalid_status,error,quarantine,"status is not sent, clicked or converted"
+referrals,orphan_referrer,error,quarantine,The referrer is not a valid user
+referrals,unknown_referred_user,error,quarantine,referred_user_id is not in users
+referrals,self_referral,error,quarantine,The invited email is the referrer's own (after normalising case and +tags)
+referrals,status_inconsistent,error,quarantine,Status converted without a referred user and converted_at (or the reverse)
+referrals,existing_member,error,quarantine,Converted to someone who was already a member when the invite was sent
+referrals,converted_before_sent,error,quarantine,converted_at is earlier than sent_at
+referrals,duplicate_send,warn,quarantine,Same referrer invited the same email within duplicate_send_window_hours; the later invite is quarantined
+users,unparseable_or_missing,error,quarantine,user_id or created_at is missing or cannot be parsed
+users,orphan_school,error,quarantine,school_id is not in schools
+users,invalid_user_type,error,quarantine,"user_type is not parent, teacher or supporter"
+users,shared_email,warn,flag,Another user has the same email; joins never use email

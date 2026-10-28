@@ -1,0 +1,101 @@
+version: 2
+
+models:
+  - name: school_daily_activity
+    description: >
+      One row per school per day, zero-filled: DAU (active_users), new signups,
+      purchases, spend, points and dollars raised. Incremental (delete+insert of the
+      dates touched by each run).
+    data_tests:
+      - unique_combination:
+          arguments:
+            columns: ['activity_date', 'school_id']
+
+  - name: school_engagement_monthly
+    description: One row per school per month. Stickiness = average DAU / MAU.
+    data_tests:
+      - unique_combination:
+          arguments:
+            columns: ['month', 'school_id']
+    columns:
+      - name: stickiness
+        data_tests:
+          - expression_is_true:
+              arguments:
+                expression: "stickiness is null or stickiness between 0 and 1"
+
+  - name: school_fundraising_leaderboard
+    description: Monthly and cumulative fundraising rank per school, with rank movement.
+    data_tests:
+      - unique_combination:
+          arguments:
+            columns: ['month', 'school_id']
+
+  - name: cohort_retention
+    description: >
+      Share of each monthly signup cohort active k months after signup, by
+      acquisition channel and for all users. Only fully observed months.
+    data_tests:
+      - unique_combination:
+          arguments:
+            columns: ['cohort_month', 'channel', 'months_since_signup']
+    columns:
+      - name: retention_rate
+        data_tests:
+          - expression_is_true:
+              arguments:
+                expression: "retention_rate between 0 and 1"
+
+  - name: referral_funnel_monthly
+    description: >
+      Invites by month sent and referrer segment: sent -> clicked -> converted ->
+      qualified. qualification_rate only counts conversions whose 30-day window
+      has closed.
+    data_tests:
+      - unique_combination:
+          arguments:
+            columns: ['sent_month', 'referrer_segment']
+      - expression_is_true:
+          arguments:
+            expression: "invites >= clicked and clicked >= converted and converted >= qualified"
+
+  - name: referrer_leaderboard
+    description: One row per referrer with direct results and the whole downstream network they started.
+    columns:
+      - name: user_id
+        data_tests: [unique, not_null]
+      - name: network_size
+        data_tests:
+          - expression_is_true:
+              arguments:
+                expression: "network_size >= direct_referrals"
+
+  - name: referral_growth_monthly
+    description: Signups, referral share of signups, invites per active user and the viral coefficient (K) by month.
+    columns:
+      - name: month
+        data_tests: [unique, not_null]
+
+  - name: product_category_monthly
+    description: Category performance by month and user type.
+    data_tests:
+      - unique_combination:
+          arguments:
+            columns: ['month', 'category', 'user_type']
+
+  - name: purchase_time_heatmap
+    description: Purchases by day of week and hour (168 cells).
+    data_tests:
+      - unique_combination:
+          arguments:
+            columns: ['day_of_week_number', 'hour_of_day']
+
+  - name: spending_by_segment
+    description: >
+      Spending by school-district income level and user type: purchases per
+      buyer, units and spend per purchase, average list price, promo share and
+      dollars raised per user.
+    data_tests:
+      - unique_combination:
+          arguments:
+            columns: ['income_level', 'user_type']

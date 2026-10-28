@@ -1,0 +1,40 @@
+name: carton_caps
+version: '1.0.0'
+profile: carton_caps
+
+model-paths: ['models']
+seed-paths: ['seeds']
+test-paths: ['tests']
+macro-paths: ['macros']
+target-path: target
+clean-targets: ['target', 'logs']
+
+flags:
+  send_anonymous_usage_stats: false
+
+models:
+  carton_caps:
+    silver:
+      +schema: silver
+      +materialized: table
+    gold:
+      +schema: gold
+      +materialized: table
+    quality:
+      +schema: quality
+      +materialized: table
+
+seeds:
+  carton_caps:
+    +schema: quality
+
+vars:
+  # Business rules (see docs/data_generation.md and docs/pipeline_spec.md section 4.4)
+  points_per_dollar_raised: 100       # 100 points = $1 donated to the school
+  referral_bonus_usd: 5               # paid to each side of a qualified referral
+  qualification_window_days: 30       # first purchase within this many days of signup
+  # Data-quality thresholds
+  duplicate_send_window_hours: 24
+  min_price_ratio: 0.5                # price_paid below this share of list is suspicious
+  # Keyed hash for emails; set CARTON_CAPS_EMAIL_SALT outside local development
+  email_hash_salt: "{{ env_var('CARTON_CAPS_EMAIL_SALT', 'local-dev-salt') }}"

@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: bronze
+    description: Raw landing rows loaded by pipeline/ingest.py. Every source column is VARCHAR; lineage columns record the batch, file and line.
+    schema: bronze
+    tables:
+      - name: schools
+        description: Full snapshot of schools, one copy per batch.
+      - name: users
+        description: Full snapshot of users, one copy per batch.
+      - name: products
+        description: Full snapshot of the product catalog, one copy per batch.
+      - name: districts
+        description: School districts (city and state) with income level; external reference data, one copy per batch.
+      - name: purchases
+        description: Purchase lines that arrived in each batch (append-only events).
+      - name: referrals
+        description: Referral invites that are new or changed in each batch (change data).
+
+  - name: meta
+    description: Ingestion bookkeeping written by pipeline/ingest.py.
+    schema: meta
+    tables:
+      - name: ingested_files
+      - name: ingestion_log

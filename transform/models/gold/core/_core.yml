@@ -1,0 +1,145 @@
+version: 2
+
+models:
+  - name: dim_date
+    description: One row per day from the first signup to the last activity. School years run August to July.
+    columns:
+      - name: date_day
+        data_tests: [unique, not_null]
+
+  - name: dim_schools
+    description: Schools with their district (city and state) and its income level.
+    columns:
+      - name: school_id
+        data_tests: [unique, not_null]
+      - name: income_level
+        description: Every school must match a district.
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['low', 'middle', 'high']
+
+  - name: dim_products
+    description: Product catalog.
+    columns:
+      - name: product_id
+        data_tests: [unique, not_null]
+
+  - name: dim_users
+    description: >
+      Valid users with acquisition channel (organic or referral, by last-touch
+      attribution), position in the referral network (generation 0 = organic),
+      and activation. No names or raw emails.
+    columns:
+      - name: user_id
+        data_tests: [unique, not_null]
+      - name: school_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_schools')
+                field: school_id
+      - name: acquisition_channel
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['organic', 'referral']
+      - name: referral_generation
+        description: 0 for organic users; n for a user n referral hops from an organic user.
+        data_tests:
+          - not_null
+          - expression_is_true:
+              arguments:
+                expression: "(referral_generation = 0) = (acquisition_channel = 'organic')"
+
+  - name: fct_purchases
+    description: >
+      One row per valid purchase line. points_earned is the rule value
+      (repaired where the app reported something else); points_reported is the
+      app's value. dollars_raised = points_earned / 100.
+    columns:
+      - name: purchase_id
+        data_tests: [unique, not_null]
+      - name: user_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_users')
+                field: user_id
+      - name: product_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_products')
+                field: product_id
+      - name: quantity
+        data_tests:
+          - expression_is_true:
+              arguments:
+                expression: "quantity > 0"
+      - name: price_paid
+        data_tests:
+          - expression_is_true:
+              arguments:
+                expression: "price_paid > 0 and price_paid <= list_amount"
+
+  - name: fct_referrals
+    description: >
+      One row per valid invite with its funnel stage. Qualified = converted and
+      the new user made a valid purchase within qualification_window_days.
+      bonus_usd covers both sides of a qualified referral.
+    columns:
+      - name: referral_id
+        data_tests: [unique, not_null]
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['sent', 'clicked', 'converted']
+      - name: is_qualified
+        data_tests:
+          - expression_is_true:
+              arguments:
+                expression: "not is_qualified or is_converted"
+      - name: referred_user_id
+        data_tests:
+          - unique
+          - relationships:
+              arguments:
+                to: ref('dim_users')
+                field: user_id
+
+  - name: fct_user_activity_daily
+    description: One row per user per day with a valid purchase or a valid invite. Defines "active".
+    data_tests:
+      - unique_combination:
+          arguments:
+            columns: ['user_id', 'activity_date']
+
+unit_tests:
+  - name: referral_generations_follow_the_chain
+    description: An organic user is generation 0; each referral hop adds one, and the root is the organic ancestor.
+    model: dim_users
+    given:
+      - input: ref('users_current')
+        rows:
+          - {user_id: 1, school_id: 1, signup_at: '2024-01-01 08:00:00', dq_status: valid}
+          - {user_id: 2, school_id: 1, signup_at: '2024-01-10 08:00:00', dq_status: valid}
+          - {user_id: 3, school_id: 1, signup_at: '2024-01-20 08:00:00', dq_status: valid}
+          - {user_id: 4, school_id: 2, signup_at: '2024-01-25 08:00:00', dq_status: valid}
+      - input: ref('referrals_checked')
+        rows:
+          - {referral_id: 11, referrer_user_id: 1, referred_user_id: 2, converted_at: '2024-01-10 08:00:00', status: converted, dq_status: valid}
+          - {referral_id: 12, referrer_user_id: 2, referred_user_id: 3, converted_at: '2024-01-20 08:00:00', status: converted, dq_status: valid}
+          - {referral_id: 13, referrer_user_id: 2, referred_user_id: 4, converted_at: '2024-01-25 08:00:00', status: converted, dq_status: quarantined}
+      - input: ref('purchases_checked')
+        rows:
+          - {user_id: 3, purchased_at: '2024-01-21 10:00:00', dq_status: valid}
+    expect:
+      rows:
+        - {user_id: 1, acquisition_channel: organic, referral_generation: 0, root_user_id: 1, is_activated: false}
+        - {user_id: 2, acquisition_channel: referral, referral_generation: 1, root_user_id: 1, is_activated: false}
+        - {user_id: 3, acquisition_channel: referral, referral_generation: 2, root_user_id: 1, is_activated: true}
+        - {user_id: 4, acquisition_channel: organic, referral_generation: 0, root_user_id: 4, is_activated: false}

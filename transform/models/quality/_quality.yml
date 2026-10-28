@@ -1,0 +1,28 @@
+version: 2
+
+seeds:
+  - name: dq_check_catalog
+    description: Every data-quality check, its severity, and what the pipeline does with a failing record.
+    columns:
+      - name: action
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['quarantine', 'repair', 'flag', 'drop_extra_copies']
+
+models:
+  - name: dq_issues
+    description: One row per detected issue (a record can have several).
+    columns:
+      - name: severity
+        description: Null here would mean a check is missing from the catalog.
+        data_tests: [not_null]
+
+  - name: dq_summary
+    description: Records affected per check, with the share of the entity's records.
+
+  - name: quarantine_purchases
+    description: Purchases held back from gold and why. Re-checked every run.
+
+  - name: quarantine_referrals
+    description: Referral invites held back from gold and why. Re-checked every run.
